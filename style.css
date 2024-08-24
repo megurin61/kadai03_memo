@@ -1,0 +1,149 @@
+/* ページ全体を中央寄せ、背景色をピンクに設定 */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #c0fff5; /* 背景色を変更 */
+    display: flex;
+    flex-direction: row;/* 左から右へそろえる */
+    align-items: center;/* 横方向で中央揃え */
+    padding-top: 150px; /* ヘッダーの高さ分だけ余白を追加 */
+    margin: 0;/* margin: 0;を設定するのは、ブラウザのデフォルトスタイルをリセットし、ウェブページ全体のレイアウトを正確に制御するため */
+}
+
+/* ヘッダーのスタイル（最上部に固定）そのためにポジションフィックスを利用。 */
+header {
+    position: fixed;
+    top: 10px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    border-radius: 200px;/* 丸みをつけて可愛い感じに */
+    background-color: pink; /* 背景色をボディと同じに設定 */
+    padding: 20px 0px; /* 上下に余白を追加 */
+    box-shadow: 0 5px 5px rgba(8, 8, 8, 0.1); /* 下に影をつけて区切りをつける */
+    z-index: 1000; /* 他の要素より前に表示されるように */
+    height: 60px;
+}
+
+.notepad-container-wrapper {
+height: 80px;
+    display: flex; /* 横並びにする */
+    flex-wrap: wrap; /* 自動的に折り返すために利用 */
+    justify-content: center;
+    gap: 20px; /* メモ帳間のスペースを調整 */
+}
+
+.notepad-container {
+    width: 300px; /* メモ帳の幅を少し狭める */
+    background: white;
+    padding: 20px;
+    border-radius: 200px;/* 丸みをつけて可愛い感じに */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+textarea {
+    width: 100%;
+    height: 100px;
+    padding: 20px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 50px;
+    box-sizing: border-box; /*境界およびパディングを、要素に指定した width および height の中で取るようブラウザーに指示するため、このCSSを当てた  */
+    text-align: center;
+}
+
+button {
+    padding: 10px 20px;
+    border;none;
+    background-color: #a6e5f8;
+    color: white;
+    border-radius: 4px;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #e7f09b;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    background-color: #f0f0f0;
+    margin: 10px 0;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* 少し影を追加して浮き上がるように見せる */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: transform 0.3s ease; /* ホバー時のアニメーション */
+}
+
+li:hover {
+    transform: translateY(-5px); /* ホバー時に少し浮かび上がる効果 */
+}
+
+/* 削除ボタンのスタイル */
+li button {
+    background-color: #a7e643; /* 鮮やかな赤色 */
+    border: none;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 50px; /* 丸みを帯びたボタンに */
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* ホバー時のアニメーション */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+li button:hover {
+    background-color: #c0392b; /* ホバー時に色が濃くなる */
+}
+
+/* 削除ボタンにアイコンを追加 */
+li button::before {
+    content: "✖️"; /* 文字を削除アイコンとして利用 */
+    margin-right: 5px;
+}
+
+
+
+
+
+
+
+
+
+/* li {
+    background-color: #f8f9fa;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+li button {
+    background-color: #dc3545;
+    border: none;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+li button:hover {
+    background-color: #c82333;
+} */
