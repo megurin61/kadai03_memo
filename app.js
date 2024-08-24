@@ -105,53 +105,172 @@ $(document).ready(function() {
 
     loadNotes2();
 
-    // Memo 3 ~ 10 の処理も同様に続けて記述します
-
-
-    function loadNotes3() {
-        var notes = JSON.parse(localStorage.getItem('notes3')) || [];
-        notes.forEach(function(note) {
-            var newNote = $('<li>' + note + '<button class="deleteNoteButton">Delete</button></li>');
-            $('#noteList3').append(newNote);
-        });
-    }
-
-    function saveNotes3() {
-        var notes = [];
-        $('#noteList3 li').each(function() {
-            notes.push($(this).text().replace('Delete', '').trim());
-        });
-        localStorage.setItem('notes3', JSON.stringify(notes));
-    }
-
-    $('#addNoteButton3').click(function() {
-        var noteText = $('#noteInput3').val().trim();
-        if (noteText !== "") {
-            var newNote = $('<li>' + noteText + '<button class="deleteNoteButton">Delete</button></li>');
-            $('#noteList3').append(newNote);
-            $('#noteInput3').val("");
-            saveNotes2();
-        }
+ // Memo 3 の処理も同様に設定
+ function loadNotes3() {
+    var notes = JSON.parse(localStorage.getItem('notes3')) || [];
+    notes.forEach(function(note) {
+        var newNote = $('<li>' + note + '<button class="deleteNoteButton">Delete</button></li>');
+        $('#noteList3').append(newNote);
     });
+}
 
-    $('#noteList3').on('click', '.deleteNoteButton', function() {
-        $(this).parent().remove();
-        saveNotes3();
+function saveNotes3() {
+    var notes = [];
+    $('#noteList3 li').each(function() {
+        notes.push($(this).text().replace('Delete', '').trim());
     });
+    localStorage.setItem('notes3', JSON.stringify(notes));
+}
 
-    $('#clearNoteButton3').click(function() {
+$('#addNoteButton3').click(function() {
+    var noteText = $('#noteInput3').val().trim();
+    if (noteText !== "") {
+        var newNote = $('<li>' + noteText + '<button class="deleteNoteButton">Delete</button></li>');
+        $('#noteList3').append(newNote);
         $('#noteInput3').val("");
-        $('#noteList3').empty();
-        localStorage.removeItem('notes3');
-    });
-
-    loadNotes3();
-
-
-
-
-
-    // 以下同様に Memo 3, 4, 5,... の関数とイベント処理を記述
+        saveNotes3();
+    }
 });
 
-  
+$('#noteList3').on('click', '.deleteNoteButton', function() {
+    $(this).parent().remove();
+    saveNotes3();
+});
+
+$('#clearNoteButton3').click(function() {
+    $('#noteInput3').val("");
+    $('#noteList3').empty();
+    localStorage.removeItem('notes3');
+});
+
+loadNotes3();
+
+
+ // Memo 4 の処理も同様に設定
+ function loadNotes4() {
+    var notes = JSON.parse(localStorage.getItem('notes4')) || [];
+    notes.forEach(function(note) {
+        var newNote = $('<li>' + note + '<button class="deleteNoteButton">Delete</button></li>');
+        $('#noteList4').append(newNote);
+    });
+}
+
+function saveNotes4() {
+    var notes = [];
+    $('#noteList4 li').each(function() {
+        notes.push($(this).text().replace('Delete', '').trim());
+    });
+    localStorage.setItem('notes2', JSON.stringify(notes));
+}
+
+$('#addNoteButton4').click(function() {
+    var noteText = $('#noteInput4').val().trim();
+    if (noteText !== "") {
+        var newNote = $('<li>' + noteText + '<button class="deleteNoteButton">Delete</button></li>');
+        $('#noteList4').append(newNote);
+        $('#noteInput4').val("");
+        saveNotes4();
+    }
+});
+
+$('#noteList4').on('click', '.deleteNoteButton', function() {
+    $(this).parent().remove();
+    saveNotes4();
+});
+
+$('#clearNoteButton4').click(function() {
+    $('#noteInput4').val("");
+    $('#noteList4').empty();
+    localStorage.removeItem('notes4');
+});
+
+loadNotes4();
+
+
+ // Memo 55 の処理も同様に設定
+ function loadNotes5() {
+    var notes = JSON.parse(localStorage.getItem('notes5')) || [];
+    notes.forEach(function(note) {
+        var newNote = $('<li>' + note + '<button class="deleteNoteButton">Delete</button></li>');
+        $('#noteList5').append(newNote);
+    });
+}
+
+function saveNotes5() {
+    var notes = [];
+    $('#noteList5 li').each(function() {
+        notes.push($(this).text().replace('Delete', '').trim());
+    });
+    localStorage.setItem('notes5', JSON.stringify(notes));
+}
+
+$('#addNoteButton5').click(function() {
+    var noteText = $('#noteInput5').val().trim();
+    if (noteText !== "") {
+        var newNote = $('<li>' + noteText + '<button class="deleteNoteButton">Delete</button></li>');
+        $('#noteList5').append(newNote);
+        $('#noteInput5').val("");
+        saveNotes5();
+    }
+});
+
+$('#noteList5').on('click', '.deleteNoteButton', function() {
+    $(this).parent().remove();
+    saveNotes5();
+});
+
+$('#clearNoteButton5').click(function() {
+    $('#noteInput5').val("");
+    $('#noteList5').empty();
+    localStorage.removeItem('notes5');
+});
+
+loadNotes5();
+
+ // Memo 6 の処理も同様に設定
+ function loadNotes6() {
+    var notes = JSON.parse(localStorage.getItem('notes6')) || [];
+    notes.forEach(function(note) {
+        var newNote = $('<li>' + note + '<button class="deleteNoteButton">Delete</button></li>');
+        $('#noteList6').append(newNote);
+    });
+}
+
+function saveNotes6() {
+    var notes = [];
+    $('#noteList6 li').each(function() {
+        notes.push($(this).text().replace('Delete', '').trim());
+    });
+    localStorage.setItem('notes2', JSON.stringify(notes));
+}
+
+$('#addNoteButton6').click(function() {
+    var noteText = $('#noteInput6').val().trim();
+    if (noteText !== "") {
+        var newNote = $('<li>' + noteText + '<button class="deleteNoteButton">Delete</button></li>');
+        $('#noteList6').append(newNote);
+        $('#noteInput6').val("");
+        saveNotes6();
+    }
+});
+
+$('#noteList6').on('click', '.deleteNoteButton', function() {
+    $(this).parent().remove();
+    saveNotes6();
+});
+
+$('#clearNoteButton6').click(function() {
+    $('#noteInput6').val("");
+    $('#noteList6').empty();
+    localStorage.removeItem('notes6');
+});
+
+loadNotes6();
+
+
+
+
+
+    // Memo 3 ~ 10 の処理も同様に続けて記述します
+    // 以下同様に Memo 3, 4, 5,... の関数とイベント処理を記述
+});
